@@ -1,5 +1,7 @@
+import 'react-native-gesture-handler';
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import AppNavContainer from './src/navigations';
 
 const Square = ({ text }) => (
   <View style={styles.square}>
@@ -10,7 +12,7 @@ const Square = ({ text }) => (
 class App extends Component {
   render() {
     return (
-      <>
+      <AppNavContainer>
         <View style={styles.container}>
           <View style={styles.row}>
             <Square text="A" />
@@ -28,7 +30,7 @@ class App extends Component {
             <Square text="I" />
           </View>
         </View>
-      </>
+      </AppNavContainer>
     );
   }
 }
